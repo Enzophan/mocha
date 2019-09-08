@@ -8,9 +8,8 @@ chai.use(chaiHttp);
 
 
 describe("Server!", () => {
-  
-  it("welcomes user to the api", function(done) {
-    this.timeout(5000);
+
+  it("welcomes user to the api", function () {
     chai
       .request(app)
       .get("/")
@@ -19,7 +18,6 @@ describe("Server!", () => {
         expect(res.body.status).to.equals("success");
         expect(res.body.message).to.equals("Welcom to testing api");
       });
-      setTimeout(done,5000);
   });
 
   it("welcomes user to the api", done => {
