@@ -1,13 +1,14 @@
 var express = require('express');
+var bodyParser = require('body-parser');
 var app = express();
 
-app.use(express.json);
+// app.use(express.json);
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
-    res.json({ status: "sucess", msg: "Welcom to testing api" });
-
-}
-);
+    res.json({ status: "success", message: "Welcom to testing api" });
+});
 
 app.post('/add', (req, res) => {
     var { num1, num2 } = req.body;
@@ -15,14 +16,16 @@ app.post('/add', (req, res) => {
         return num1 + num2;
     };
     res.json({
-        status:"sucess",
-        msg:"Welcom to testing api",
-        result: add(num1,num2)
+        status: "success",
+        message: "Welcom to testing api",
+        result: add(num1, num2)
     });
 });
 
-var PORT = process.env.PORT || 3000;
+var port = process.env.PORT || 3000;
 
-app.listen(PORT,()=> console.log("Server start on PORT: " + PORT))
+app.listen(port, function () {
+    console.log('Express server listening on port ' + port);
+})
 
 module.exports = app;
