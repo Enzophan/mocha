@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha || true"
   },
   "author": "",
   "license": "ISC",
@@ -14,7 +14,7 @@
     "chai-http": "^4.3.0",
     "chromedriver": "^76.0.1",
     "express": "^4.17.1",
-    "geckodriver": "^1.11.0",
+    "geckodriver": "^1.19.1",
     "mocha": "^6.2.0",
     "selenium-webdriver": "^4.0.0-alpha.5"
   }
