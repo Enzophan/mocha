@@ -1,0 +1,28 @@
+{
+  "name": "mocha-chai-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -r ts-node/register test/**.spec.ts",
+    "test:nyc": "nyc mocha -r ts-node/register test/**.spec.ts",
+    "test:coverage": "nyc mocha -r ts-node/register test/**.spec.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai": "^4.3.19",
+    "@types/mocha": "^10.0.7",
+    "chai": "^5.1.1",
+    "mocha": "^10.7.3",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "nock": "^13.5.5",
+    "nyc": "^17.0.0"
+  }
+}
